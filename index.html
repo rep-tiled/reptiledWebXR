@@ -6,6 +6,11 @@
 
     <!--import aframe-->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    
+    <!--addons-->
+    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script> <!--text-->
+
+    <!--my scripts-->
     <script src="./scripts/colorToggle.js"></script>
 </head>
 <body>
@@ -13,20 +18,21 @@
     <a-scene cursor="rayOrigin: mouse">
         <!--assets preload-->
         <a-assets>
-            <!--asset setup here-->
+            <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
         </a-assets>
       
 <!--physical scene -->
     
-      <!--lil floor-->
-      <a-plane position="0 0 0" rotation="-90 0 0" width="9" height="9" color="#3CAE2A"></a-plane>
+    <!--World Meta-->
+    <a-sky color="black"></a-sky> 
 
-      <a-sky color="black"></a-sky>
+    <!--World objects-->
+    <a-plane position="0 0 0" rotation="-90 0 0" width="9" height="9" color="#3CAE2A"></a-plane> <!--lil floor-->
 
-      <a-box position="-60 13 -22" scale="15 30 15" color="green"></a-box>
+    <a-box position="3 0.5 3" color-toggle color="white"></a-box> <!--color toggle box-->
 
-      <a-box position="-3 0.5 -3" color-toggle color="white"></a-box>
-
-      
+<!--screen-->
+    <!--top bar-->
+    <a-entity material="color: green;" position="-4.5 4 -5" text-geometry="value: rep-tiled"></a-entity>
 
 </body>
