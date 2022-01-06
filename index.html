@@ -9,6 +9,7 @@
     
     <!--addons-->
     <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script> <!--text-->
+    <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script> <!--html shader-->
 
     <!--my scripts-->
     <script src="./scripts/colorToggle.js"></script>
@@ -38,6 +39,12 @@
     
     <!--middle screen center-->
     <a-box position="0 2 -5.17889" scale="7.97345 3.619 0.02453" material="color: black"></a-box>
+        <!--screen-->
+        <a-entity geometry="primitive: box" material="shader: html; target: #htmlElement" position="0 2 -5.17889" scale="7.97345 3.619 0.025"></a-entity>
+    </a-scene>
 
+    <div style="width: 7.97345; height: 3.619; position: fixed; left: 0; top: 0; z-index: -1; overflow: hidden">
+    <div id="htmlElement" style="background: #F8F8F8; color: #333; font-size: 48px">Hello, HTML!</div>
     </div>
+    
 </body>
