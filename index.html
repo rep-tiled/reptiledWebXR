@@ -2,14 +2,14 @@
 <head>
     <title>Rep-tiled VR</title>
 
-    <link rel="stylesheet" href="style/XRIndex.css">
+    <link rel="stylesheet" href="style/backgroundClassic.css">
 
     <!--import aframe-->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     
     <!--addons-->
     <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script> <!--text-->
-    <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script> <!--html shader-->
+    <script src="./shaders/htmlShader.min.js"></script> <!--html shader-->
 
     <!--my scripts-->
     <script src="./scripts/colorToggle.js"></script>
@@ -38,13 +38,15 @@
     <a-entity text-geometry="value: VR" material="color: green; flatShading: true" scale="0.405 0.405 0.405" position="-1.90905 4 -5" id="headerSubtitle"></a-entity>
     
     <!--middle screen center-->
-    <a-box position="0 2 -5.17889" scale="7.97345 3.619 0.02453" material="color: black"></a-box>
+    <a-box position="0 2 -5.259" scale="7.97345 3.619 0.02453" material="color: black"></a-box>
         <!--screen-->
         <a-entity geometry="primitive: box" material="shader: html; target: #htmlElement" position="0 2 -5.17889" scale="7.97345 3.619 0.025"></a-entity>
     </a-scene>
 
-    <div style="width: 7.97345; height: 3.619; position: fixed; left: 0; top: 0; z-index: -1; overflow: hidden">
-    <div id="htmlElement" style="background: #F8F8F8; color: #333; font-size: 48px">Hello, HTML!</div>
+    <div style="width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: -1; overflow: hidden">
+        <div class="boxBack">
+            <h1>Felix Layout</h1>
+        </div>
     </div>
     
 </body>

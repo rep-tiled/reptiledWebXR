@@ -1,0 +1,35 @@
+/*vars*/
+:root {
+    --text-color: white;
+    --background-color: #1E1E1E;
+
+    scroll-behavior: smooth;
+}
+
+/*main css*/
+body {
+    background-color: var(--background-color);
+  }
+
+.boxBack{
+  background-color: rgba(0, 0, 0, 0.664) ;
+  color: white;
+  font-family:helvetica;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1%;
+  margin-top: 2%;
+}
+
+/*overs*/
+a { 
+    color:white 
+}
+
+body {
+    background-image: url('https://i.imgur.com/MThPYi3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
