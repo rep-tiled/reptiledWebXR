@@ -2,7 +2,7 @@ AFRAME.registerComponent('color-toggle', {
     init: function(){
         let el =this.el;
         this.toggleColor = function(){
-            el.setAttribute('color','black');
+            el.setAttribute('color','black'); 
         }
         this.el.addEventListener('click', this.toggleColor); //listen for click event
     },
